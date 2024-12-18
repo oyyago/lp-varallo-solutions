@@ -42,9 +42,11 @@ const MainContainer = styled('div')`
   justify-content: 'center';
 
   @media (max-width: 900px) {
-    width: 80%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;  
   }
-
 `;
 
 export default function Hero() {
