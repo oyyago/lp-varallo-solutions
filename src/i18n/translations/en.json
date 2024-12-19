@@ -89,6 +89,13 @@
       "contactInputDescriptionLabel": "Project Description",
       "contactInputDescriptionPlaceHolder": "Describe your project",
   
+      "contactInputNameError": "Name is required.",
+      "contactInputCompanyNameError": "Company name is required.",
+      "contactInputEmailError": "A valid email is required.",
+      "contactInputPhoneError": "Phone number is required.",
+      "contactInputDescriptionError": "Please provide a description of your project.",
+      "homeEmailInputError":"Invalid email",
+
       "contactButtonSubmit": "Send Now",
   
       "footerAboutUs": "Our company was founded in 2022, specializing in developing Software, Applications, SaaS solutions, and digital platforms. It helps businesses scale their operations through customized and efficient technology.",

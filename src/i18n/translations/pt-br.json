@@ -80,19 +80,27 @@
     "contactTextWorkHour":"Horario de trabalho: ",
     "contactInputNameLabel":"Nome",
     "contactInputNamePlaceholder":"Seu nome Completo",
-
+    
     "contactInputCompanyNameLabel":"Nome da empresa",
     "contactInputCompanyNamePlaceholder":"Nome da empresa",
-
+    
     "contactInputEmailLabel":"Email de contato",
     "contactInputEmailPlaceholder":"nome@gmail.com",
-
+    
     "contactInputPhoneLabel":"Telefone",
-
+    
     "contactInputDescriptionLabel":"Descrição do projeto",
     "contactInputDescriptionPlaceHolder":"Descreva seu projeto",
+    
+    "contactInputNameError": "O nome é obrigatório.",
+    "contactInputCompanyNameError": "O nome da empresa é obrigatório.",
+    "contactInputEmailError": "É necessário um e-mail válido.",
+    "contactInputPhoneError": "O número de telefone é obrigatório.",
+    "contactInputDescriptionError": "Por favor, forneça uma descrição do seu projeto.",
 
     "contactButtonSubmit":"Enviar agora",
+
+    "homeEmailInputError":"Email inválido",
 
     "footerAboutUs":"Nossa companhia foi fundada em 2022, especializada no desenvolvimento de Softwares, Aplicativos, soluções SaaS e plataformas digitais. Ela ajuda empresas a escalarem seus negócios por meio de tecnologia personalizada e eficiente.",
     "footerRightsCompany":"© 2022 Varallo solutions LTDA. Todos os direitos reservados / CNPJ: 54.125.550/0001-66"

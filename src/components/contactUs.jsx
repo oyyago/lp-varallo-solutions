@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IconsContainer, SoftwareHouseContainer, TitleContainer } from './moreAboutUs';
-import { alpha, Container, InputLabel, Stack, styled, TextareaAutosize, TextField } from '@mui/material';
+import { Alert, alpha, Container, InputLabel, Snackbar, Stack, styled, TextareaAutosize, TextField } from '@mui/material';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
 import { visuallyHidden } from '@mui/utils';
 import { useTranslation } from 'react-i18next';
@@ -135,6 +135,42 @@ const ButtonContainer = styled('div')`
 
 export const ContactUs = () => {
   const { t } = useTranslation();
+  const [form, setForm] = useState({
+    name: '',
+    company: '',
+    email: '',
+    phone: '',
+    description: '',
+  });
+  const [errors, setErrors] = useState({});
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!form.name.trim()) newErrors.name = t('contactInputNameError');
+    if (!form.company.trim()) newErrors.company = t('contactInputCompanyNameError');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
+      newErrors.email = t('contactInputEmailError');
+    if (!form.phone.trim()) newErrors.phone = t('contactInputPhoneError');
+    if (!form.description.trim()) newErrors.description = t('contactInputDescriptionError');
+    return newErrors;
+  };
+
+  const handleSubmit = () => {
+    const newErrors = validateForm();
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+    setErrors({});
+    setSnackbarOpen(true);
+  };
+
+  const handleChange = (field, value) => {
+    setForm({ ...form, [field]: value });
+    setErrors({ ...errors, [field]: '' });
+  };
+
 
   return (
     <Container id="contact" sx={{ py: { xs: 8, sm: 16 }, }}>
@@ -167,111 +203,80 @@ export const ContactUs = () => {
         </OurContactContainer>
 
         <ContactContainer>
-          <OtherContainer >
-            <InputContainer
-            >
-              <InputLabel htmlFor="email-hero" >
-                {t('contactInputNameLabel')}
-              </InputLabel>
+          <OtherContainer>
+            <InputContainer>
+              <InputLabel>{t('contactInputNameLabel')}</InputLabel>
               <TextField
-                id="email-hero"
-                hiddenLabel
-                size="small"
-                variant="outlined"
-                aria-label={t('contactInputNamePlaceholder')}
+                value={form.name}
+                onChange={(e) => handleChange('name', e.target.value)}
+                error={!!errors.name}
+                helperText={errors.name}
                 placeholder={t('contactInputNamePlaceholder')}
-                fullWidth
-                slotProps={{
-                  htmlInput: {
-                    autoComplete: 'off',
-                    'aria-label': t('contactInputNamePlaceholder'),
-                  },
-                }}
               />
             </InputContainer>
-            <InputContainer
-            >
-              <InputLabel htmlFor="email-hero">
-                {t('contactInputCompanyNameLabel')}
-              </InputLabel>
+            <InputContainer>
+              <InputLabel>{t('contactInputCompanyNameLabel')}</InputLabel>
               <TextField
-                id="email-hero"
-                hiddenLabel
-                size="small"
-                variant="outlined"
-                aria-label={t('contactInputCompanyNamePlaceholder')}
+                value={form.company}
+                onChange={(e) => handleChange('company', e.target.value)}
+                error={!!errors.company}
+                helperText={errors.company}
                 placeholder={t('contactInputCompanyNamePlaceholder')}
-                fullWidth
-                slotProps={{
-                  htmlInput: {
-                    autoComplete: 'off',
-                    'aria-label': t('contactInputCompanyNamePlaceholder'),
-                  },
-                }}
               />
             </InputContainer>
           </OtherContainer>
 
-          <InputContainer
-          >
-            <InputLabel htmlFor="email-hero" >
-              {t('contactInputEmailLabel')}
-            </InputLabel>
+          <InputContainer>
+            <InputLabel>{t('contactInputEmailLabel')}</InputLabel>
             <TextField
-              id="email-hero"
-              hiddenLabel
-              size="small"
-              variant="outlined"
-              aria-label="Enter the corporate email"
+              value={form.email}
+              onChange={(e) => handleChange('email', e.target.value)}
+              error={!!errors.email}
+              helperText={errors.email}
               placeholder={t('contactInputEmailPlaceholder')}
-              fullWidth
-              slotProps={{
-                htmlInput: {
-                  autoComplete: 'off',
-                  'aria-label': 'Enter the corporate email',
-                },
-              }}
-            />
-          </InputContainer>
-          <InputContainer
-          >
-            <InputLabel htmlFor="email-hero">
-              {t('contactInputPhoneLabel')}
-            </InputLabel>
-            <TextField
-              id="email-hero"
-              hiddenLabel
-              size="small"
-              variant="outlined"
-              aria-label="Enter your phone"
-              placeholder=""
-              fullWidth
-              slotProps={{
-                htmlInput: {
-                  autoComplete: 'off',
-                  'aria-label': 'Enter your phone',
-                },
-              }}
             />
           </InputContainer>
 
           <InputContainer>
-            <InputLabel htmlFor="project-description">
-              {t('contactInputDescriptionLabel')}
-            </InputLabel>
-            <StyledTextarea
-              id="project-description"
-              minRows={4}
-              placeholder={t('contactInputDescriptionPlaceHolder')}
-              style={{ width: '100%' }}
+            <InputLabel>{t('contactInputPhoneLabel')}</InputLabel>
+            <TextField
+              value={form.phone}
+              onChange={(e) => handleChange('phone', e.target.value)}
+              error={!!errors.phone}
+              helperText={errors.phone}
             />
           </InputContainer>
 
+          <InputContainer>
+            <InputLabel>{t('contactInputDescriptionLabel')}</InputLabel>
+            <StyledTextarea
+              value={form.description}
+              onChange={(e) => handleChange('description', e.target.value)}
+              style={{
+                borderColor: errors.description ? 'red' : undefined,
+              }}
+              placeholder={t('contactInputDescriptionPlaceholder')}
+            />
+            {errors.description && (
+              <span style={{ color: 'red', fontSize: '12px' }}>
+                {errors.description}
+              </span>
+            )}
+          </InputContainer>
+
           <ButtonContainer>
-            <button>{t('contactButtonSubmit')}</button>
+            <button onClick={handleSubmit}>{t('contactButtonSubmit')}</button>
           </ButtonContainer>
         </ContactContainer>
-
+        <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={3000}
+        onClose={() => setSnackbarOpen(false)}
+      >
+        <Alert severity="success" onClose={() => setSnackbarOpen(false)}>
+          {t('contactSuccessMessage')}
+        </Alert>
+      </Snackbar>
       </MainContainer>
     </Container>
   );

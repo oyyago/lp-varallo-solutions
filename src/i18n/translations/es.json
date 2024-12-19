@@ -89,7 +89,14 @@
         "contactInputDescriptionLabel": "Descripción del proyecto",
         "contactInputDescriptionPlaceHolder": "Describe tu proyecto",
 
+        "contactInputNameError": "El nombre es obligatorio.",
+        "contactInputCompanyNameError": "El nombre de la empresa es obligatorio.",
+        "contactInputEmailError": "Se requiere un correo electrónico válido.",
+        "contactInputPhoneError": "El número de teléfono es obligatorio.",
+        "contactInputDescriptionError": "Por favor, proporcione una descripción de su proyecto.",
+
         "contactButtonSubmit": "Enviar ahora",
+        "homeEmailInputError":"Correo electrónico no válido",
 
         "footerAboutUs": "Nuestra empresa fue fundada en 2022, especializada en el desarrollo de software, aplicaciones, soluciones SaaS y plataformas digitales. Ayuda a las empresas a escalar sus negocios a través de tecnología personalizada y eficiente.",
         "footerRightsCompany": "© 2022 Varallo Solutions LTDA. Todos los derechos reservados / CNPJ: 54.125.550/0001-66"
