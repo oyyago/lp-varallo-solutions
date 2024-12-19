@@ -292,7 +292,6 @@ export const ContactUs = () => {
               style={{
                 borderColor: errors.description ? 'red' : undefined,
               }}
-              placeholder={t('contactInputDescriptionPlaceholder')}
             />
             {errors.description && (
               <span style={{ color: 'red', fontSize: '12px' }}>
