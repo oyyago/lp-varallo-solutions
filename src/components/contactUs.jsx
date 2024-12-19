@@ -161,10 +161,10 @@ export const ContactUs = () => {
 
   const handleSubmit = async () => {
     const newErrors = validateForm();
-    // if (Object.keys(newErrors).length > 0) {
-    //   setErrors(newErrors);
-    //   return;
-    // }
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
     setLoading(true); // Ativar o carregamento (spinner)
     try {
       const response = await fetch("https://www.api.varallosolutions.com/contact", {
