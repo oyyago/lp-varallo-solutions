@@ -167,7 +167,7 @@ export const ContactUs = () => {
     }
     setLoading(true); // Ativar o carregamento (spinner)
     try {
-      const response = await fetch("https://www.api.varallosolutions.com/contact", {
+      const response = await fetch("https://api.varallosolutions.com/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

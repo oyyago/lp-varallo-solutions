@@ -73,7 +73,7 @@ export default function Hero() {
     setLoading(true); // Ativar o carregamento (spinner)
 
     try {
-      const response = await fetch("https://www.api.varallosolutions.com/email", {
+      const response = await fetch("https://api.varallosolutions.com/email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
