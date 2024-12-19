@@ -13,6 +13,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import Sitemark from './SitemarkIcon';
 import ColorModeIconDropdown from '../shared-theme/ColorModeIconDropdown';
+import LanguageSelectIconDropdown from '../shared-theme/LanguageSelectIconDropdown';
+import { useTranslation } from 'react-i18next';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -32,6 +34,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 export default function AppAppBar() {
   const [open, setOpen] = React.useState(false);
+  const { t } = useTranslation();
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -57,19 +60,22 @@ export default function AppAppBar() {
                 Home
               </Button>
               <Button variant="text" color="info" size="small" href="#about_us">
-                About us
+                {t('headerAbouUs')}
               </Button>
               <Button variant="text" color="info" size="small" href="#processes">
-                Processes
+                {t('headerProccess')}
+
               </Button>
               <Button variant="text" color="info" size="small" href="#cases">
                 Cases
               </Button>
               <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }} href="#people">
-                People
+                {t('headerPeople')}
+
               </Button>
               <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }} href="#contact">
-                Contact
+                {t('headerContato')}
+
               </Button>
             </Box>
           </Box>
@@ -80,12 +86,14 @@ export default function AppAppBar() {
               alignItems: 'center',
             }}
           >
+            <LanguageSelectIconDropdown />
             <ColorModeIconDropdown />
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' }, gap: 1 }}>
+            <LanguageSelectIconDropdown size="medium" />
             <ColorModeIconDropdown size="medium" />
-            
-            
+
+
           </Box>
         </StyledToolbar>
       </Container>

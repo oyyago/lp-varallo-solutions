@@ -8,6 +8,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Yago from '../assets/Yago.png';
 import Thiago from '../assets/thiago.webp';
+import { useTranslation } from 'react-i18next';
 
 const PeaplesContainer = styled('div')(({ theme }) => ({
     display: 'flex',
@@ -55,6 +56,8 @@ const SocialIcons = styled('div')(({ theme }) => ({
 }));
 
 export default function OurPictures() {
+    const { t } = useTranslation();
+    
     return (
         <Container id="people" sx={{ py: { xs: 8, sm: 16 }, }}>
             <SoftwareHouseContainer>
@@ -64,7 +67,7 @@ export default function OurPictures() {
                         <Brightness1Icon />
                         <Brightness1Icon />
                     </IconsContainer>
-                    <h2>CONHEÇA NÓS</h2>
+                    <h2>{t('peopleTitle')}</h2>
                 </TitleContainer>
             </SoftwareHouseContainer>
 
@@ -72,12 +75,12 @@ export default function OurPictures() {
                 <PeapleContainer>
                     <img src={Thiago} alt="Thiago Varallo" />
                     <h6>Thiago Varallo</h6>
-                    <p>Fundador/Desenvolvedor</p>
+                    <p>{t('thiagoRole')}</p>
                     <SocialIcons>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/thiago-varallo/" target="_blank" rel="noopener noreferrer">
                             <LinkedInIcon />
                         </a>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/thiagovarallo" target="_blank" rel="noopener noreferrer">
                             <GitHubIcon />
                         </a>
                     </SocialIcons>
@@ -86,18 +89,17 @@ export default function OurPictures() {
                 <PeapleContainer>
                     <img src={Yago} alt="Yago Sousa" />
                     <h6>Yago Sousa</h6>
-                    <p>Desenvolvedor</p>
+                    <p>{t('yagoRole')}</p>
                     <SocialIcons>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/oyyago" target="_blank" rel="noopener noreferrer">
                             <LinkedInIcon />
                         </a>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/oyyago" target="_blank" rel="noopener noreferrer">
                             <GitHubIcon />
                         </a>
                     </SocialIcons>
                 </PeapleContainer>
             </PeaplesContainer>
-
         </Container>
     );
 }

@@ -5,8 +5,11 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import SitemarkIcon from './SitemarkIcon';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation();
+  
   return (
     <Container
       sx={{
@@ -55,7 +58,7 @@ export default function Footer() {
               Varallo solutions LTDA
             </Typography>
             <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
-              Nossa companhia foi fundada em 2022, especializada no desenvolvimento de aplicativos, soluções SaaS e plataformas digitais. Ela ajuda empresas a escalarem seus negócios por meio de tecnologia personalizada e eficiente.
+              {t('footerAboutUs')}
             </Typography>
           </Box>
         </Box>
@@ -74,7 +77,7 @@ export default function Footer() {
         }}
       >
         <div>
-          © 2022 Varallo solutions LTDA. Todos os direitos reservados / CNPJ: 54.125.550/0001-66
+          {t('footerRightsCompany')}
         </div>
       </Box>
     </Container>

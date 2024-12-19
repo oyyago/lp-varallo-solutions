@@ -12,11 +12,12 @@ import { visuallyHidden } from '@mui/utils';
 import { styled } from '@mui/material/styles';
 import fundoBlack from '../assets/fundoBlack.svg'
 import fundoWhite from '../assets/fundoWhite.svg'
+import { useTranslation } from 'react-i18next';
 
 const StyledBox = styled('div')(({ theme }) => ({
-  backgroundImage:theme.palette.mode === 'light'
-      ? `url(${fundoWhite})`
-      : `url(${fundoBlack})`,
+  backgroundImage: theme.palette.mode === 'light'
+    ? `url(${fundoWhite})`
+    : `url(${fundoBlack})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   height: '90vh',
@@ -50,6 +51,8 @@ const MainContainer = styled('div')`
 `;
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <StyledBox id="home"
     >
@@ -95,16 +98,16 @@ export default function Hero() {
                   fontSize: 'clamp(3rem, 10vw, 3.5rem)',
                 }}
               >
-                Criando&nbsp;
+                {t("homeTitle1")}&nbsp;
                 <Typography
                   component="span"
                   variant="h1"
                   sx={(theme) => ({
                     fontSize: 'inherit',
-                    color:'hsla(25.102040816326532, 95.14563106796116%, 59.6078431372549%, 0.851)'
+                    color: 'hsla(25.102040816326532, 95.14563106796116%, 59.6078431372549%, 0.851)'
                   })}
                 >
-                  Soluções
+                  {t("homeTitle2")}
                 </Typography>
               </Typography>
               <Typography
@@ -114,9 +117,8 @@ export default function Hero() {
                   width: { sm: '100%', md: '80%' },
                 }}
               >
-Transformamos suas ideias em realidade digital, oferecendo soluções personalizadas e inovadoras para impulsionar seu negócio
-
-</Typography>
+                {t("homeSubTitle")}
+              </Typography>
               <Stack
                 direction={{ xs: 'column', sm: 'row' }}
                 spacing={1}
@@ -131,13 +133,13 @@ Transformamos suas ideias em realidade digital, oferecendo soluções personaliz
                   hiddenLabel
                   size="small"
                   variant="outlined"
-                  aria-label="Enter your email address"
-                  placeholder="Your email address"
+                  aria-label={t("homeplaceholderInput")}
+                  placeholder={t("homeplaceholderInput")}
                   fullWidth
                   slotProps={{
                     htmlInput: {
                       autoComplete: 'off',
-                      'aria-label': 'Enter your email address',
+                      'aria-label': t("homeplaceholderInput"),
                     },
                   }}
                 />
@@ -147,7 +149,7 @@ Transformamos suas ideias em realidade digital, oferecendo soluções personaliz
                   size="small"
                   sx={{ minWidth: 'fit-content' }}
                 >
-                  Enviar
+                  {t("homeButtonSubmit")}
                 </Button>
               </Stack>
               <Typography
@@ -155,9 +157,7 @@ Transformamos suas ideias em realidade digital, oferecendo soluções personaliz
                 color="text.secondary"
                 sx={{ textAlign: 'center' }}
               >
-                Send your contact now 
-                
-                .
+                {t("homeTextBellowInput")}
               </Typography>
             </Stack>
           </MainContainer>

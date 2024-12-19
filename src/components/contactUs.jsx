@@ -3,6 +3,7 @@ import { IconsContainer, SoftwareHouseContainer, TitleContainer } from './moreAb
 import { alpha, Container, InputLabel, Stack, styled, TextareaAutosize, TextField } from '@mui/material';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
 import { visuallyHidden } from '@mui/utils';
+import { useTranslation } from 'react-i18next';
 
 const MainContainer = styled('div')`
   display: flex;
@@ -133,6 +134,7 @@ const ButtonContainer = styled('div')`
 
 
 export const ContactUs = () => {
+  const { t } = useTranslation();
 
   return (
     <Container id="contact" sx={{ py: { xs: 8, sm: 16 }, }}>
@@ -143,10 +145,10 @@ export const ContactUs = () => {
             <Brightness1Icon />
             <Brightness1Icon />
           </IconsContainer>
-          <h2>VAMOS DESENVOLVER O SEU PROJETO?
+          <h2>{t('contactTitle')}
           </h2>
         </TitleContainer>
-          <p>Conte um pouco mais sobre o seu projeto para que possamos encontrar a melhor solução e agendarmos uma conversa mais aprofundada.</p>
+        <p>{t('contactText')}</p>
       </SoftwareHouseContainer>
 
       <MainContainer>
@@ -155,12 +157,12 @@ export const ContactUs = () => {
 
           <Contact>
             <div>
-              <span>Hotline 24/7</span>
-              <h3>(+23) 5535 68 68</h3>
+              <span>{t('ContactHotline')}</span>
+              <h3>{t('contactPhone')}</h3>
             </div>
 
-            <p><strong>Email:</strong> contact@Iteck.com</p>
-            <p><strong>Work Hour :</strong> Mon - Sat: 9:00 - 18:00</p>
+            <p><strong>Email:</strong> {t('contactEmail')}</p>
+            <p><strong>{t('contactTextWorkHour')}</strong> {t('contactWorkHour')}</p>
           </Contact>
         </OurContactContainer>
 
@@ -169,20 +171,20 @@ export const ContactUs = () => {
             <InputContainer
             >
               <InputLabel htmlFor="email-hero" >
-                Name
+                {t('contactInputNameLabel')}
               </InputLabel>
               <TextField
                 id="email-hero"
                 hiddenLabel
                 size="small"
                 variant="outlined"
-                aria-label="Enter your full name"
-                placeholder="Your full name"
+                aria-label={t('contactInputNamePlaceholder')}
+                placeholder={t('contactInputNamePlaceholder')}
                 fullWidth
                 slotProps={{
                   htmlInput: {
                     autoComplete: 'off',
-                    'aria-label': 'Enter your full name',
+                    'aria-label': t('contactInputNamePlaceholder'),
                   },
                 }}
               />
@@ -190,20 +192,20 @@ export const ContactUs = () => {
             <InputContainer
             >
               <InputLabel htmlFor="email-hero">
-                Company name
+                {t('contactInputCompanyNameLabel')}
               </InputLabel>
               <TextField
                 id="email-hero"
                 hiddenLabel
                 size="small"
                 variant="outlined"
-                aria-label="Company name"
-                placeholder="Company name"
+                aria-label={t('contactInputCompanyNamePlaceholder')}
+                placeholder={t('contactInputCompanyNamePlaceholder')}
                 fullWidth
                 slotProps={{
                   htmlInput: {
                     autoComplete: 'off',
-                    'aria-label': 'Company name',
+                    'aria-label': t('contactInputCompanyNamePlaceholder'),
                   },
                 }}
               />
@@ -213,7 +215,7 @@ export const ContactUs = () => {
           <InputContainer
           >
             <InputLabel htmlFor="email-hero" >
-              Corporate email
+              {t('contactInputEmailLabel')}
             </InputLabel>
             <TextField
               id="email-hero"
@@ -221,7 +223,7 @@ export const ContactUs = () => {
               size="small"
               variant="outlined"
               aria-label="Enter the corporate email"
-              placeholder="name@company"
+              placeholder={t('contactInputEmailPlaceholder')}
               fullWidth
               slotProps={{
                 htmlInput: {
@@ -234,7 +236,7 @@ export const ContactUs = () => {
           <InputContainer
           >
             <InputLabel htmlFor="email-hero">
-              Phone
+              {t('contactInputPhoneLabel')}
             </InputLabel>
             <TextField
               id="email-hero"
@@ -255,18 +257,18 @@ export const ContactUs = () => {
 
           <InputContainer>
             <InputLabel htmlFor="project-description">
-              Project Description
+              {t('contactInputDescriptionLabel')}
             </InputLabel>
             <StyledTextarea
               id="project-description"
               minRows={4}
-              placeholder="Describe your project"
+              placeholder={t('contactInputDescriptionPlaceHolder')}
               style={{ width: '100%' }}
             />
           </InputContainer>
 
           <ButtonContainer>
-            <button>Send now</button>
+            <button>{t('contactButtonSubmit')}</button>
           </ButtonContainer>
         </ContactContainer>
 

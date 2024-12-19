@@ -17,7 +17,8 @@ import interactImage from '../assets/interactImage.svg';
 import agendPet from '../assets/agendPet.svg';
 import biografiaImage from '../assets/biografiaImage.svg';
 import eurosul from '../assets/eurosul.png';
-
+import { useTranslation } from 'react-i18next';
+import vapnetImage from '../assets/vapnet.webp';
 
 const CasesContainer = styled('div')(({ theme }) => ({
 }));
@@ -84,8 +85,9 @@ const InfoContainer = styled('div')(({ theme }) => ({
 
     div: {
         display: 'flex',
-        gap: '1rem',
-
+        gap: '0.6rem',
+        rowGap:"0.2rem",
+        flexWrap: "wrap",
         h1: {
             border: "1px solid #94A0B8",
             borderRadius: '5px',
@@ -101,44 +103,52 @@ const InfoContainer = styled('div')(({ theme }) => ({
 
 
 export default function ProjectCases() {
-    const [isCardElevated, setIsCardElevated] = useState(true); // estado para controlar a posição
+    const [isCardElevated, setIsCardElevated] = useState(true);
+    const { t } = useTranslation();
+    
     const cases = [
         {
-            title: 'Interact Play',
-            subtitle: 'Painel de Administracao para ciclistas',
-            description: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet...',
-            tags: ['Node-js', 'Typescript', 'React', 'AWS', 'Redis'],
+            title: t("interactName"),
+            subtitle: t('interactTitle'),
+            description: t('interactText'),
+            tags: ['Node-js', 'Typescript', 'React', 'AWS', 'Redis', 'Mysql'],
             image: interactImage,
         },
         {
-            title: 'Bicicreteiro',
-            subtitle: 'Painel de Administracao para ciclistas',
-            description: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet...',
-            tags: ['C#', 'Front-end', 'Blazor'],
+            title: t("ciclistName"),
+            subtitle: t('ciclistTitle'),
+            description: t('ciclistText'),
+            tags: ['C#', '.NET', 'Front-end', 'Blazor'],
             image: ciclistImage,
         },
         {
-            title: 'Agend Pet',
-            subtitle: 'Painel de Administracao para ciclistas',
-            description: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet...',
-            tags: ['C#', 'Front-end', 'Blazor'],
+            title: t("agendPetName"),
+            subtitle: t('agendPetTitle'),
+            description: t('agendPetText'),
+            tags: ['Angular', 'Typescript', 'Figma', 'CSS'],
             image: agendPet,
         },
         {
-            title: 'Biografia Preta',
-            subtitle: 'Painel de Administracao para ciclistas',
-            description: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet...',
-            tags: ['C#', 'Front-end', 'Blazor'],
+            title: t("blackBiographyName"),
+            subtitle: t('blackBiographyTitle'),
+            description: t('blackBiographyText'),
+            tags: ['Node-js', 'Javascript', 'Metamask', 'OpenAi', 'EJS', 'Mysql'],
             image: biografiaImage,
         },
         {
-            title: 'Eurosul Equipamentos Nauticos',
-            subtitle: 'Automacao PipeDrive',
-            description: 'Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet...',
-            tags: ['C#', 'Front-end', 'Blazor'],
+            title: t("eurosulName"),
+            subtitle: t('eurosulTitle'),
+            description: t('eurosulText'),
+            tags: ['C#', '.NET', 'Mysql'],
             image: eurosul,
         },
-        // Adicione outros casos aqui
+        {
+            title: t("vapnetName"),
+            subtitle: t('vapnetTitle'),
+            description: t('vapnetText'),
+            tags: ['Node-js', 'TypeScript', 'OpenAi'],
+            image: vapnetImage,
+        },
     ];
 
 
@@ -151,7 +161,7 @@ export default function ProjectCases() {
                         <Brightness1Icon />
                         <Brightness1Icon />
                     </IconsContainer>
-                    <h2>ALGUNS DOS NOSSOS CASES</h2>
+                    <h2>{t("casesTitle")}</h2>
                 </TitleContainer>
 
             </SoftwareHouseContainer>
@@ -176,7 +186,6 @@ export default function ProjectCases() {
                     </CaseContainer>
                 ))}
             </CasesContainer>
-
         </Container>
     );
 }

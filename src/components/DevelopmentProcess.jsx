@@ -12,6 +12,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import DnsIcon from '@mui/icons-material/Dns';
 import BuildIcon from '@mui/icons-material/Build';
 import { Autoplay } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
 
 const TimelineWrapper = styled('div')`
   position: relative;
@@ -93,6 +94,7 @@ const TextContainer = styled('div')`
 
 export default function DevelopmentProcess() {
     const [isCardElevated, setIsCardElevated] = useState(true); // estado para controlar a posição
+      const { t } = useTranslation();
 
     return (
         <Container id="processes" sx={{ py: { xs: 8, sm: 16 } }}>
@@ -103,7 +105,7 @@ export default function DevelopmentProcess() {
                         <Brightness1Icon />
                         <Brightness1Icon />
                     </IconsContainer>
-                    <h2>NOSSO PROCESSO DE DESENVOLVIMENTO</h2>
+                    <h2>{t("processesTitle")}</h2>
                 </TitleContainer>
 
             </SoftwareHouseContainer>
@@ -138,8 +140,8 @@ export default function DevelopmentProcess() {
                             <div className="icon"><SearchIcon fontSize='larger' /></div>
                         </Card>
                         <TextContainer>
-                            <h3>Planejamento</h3>
-                            <p>O desenvolvimento de software sob medida começa no planejamento, onde a equipe de especialistas da Software House recolhe informações para estruturar todo o projeto com base nas necessidades do usuário.  A partir das informações levantadas nas etapas de Kickoff UX, Kickoff Dev e UX Research, é construído o esqueleto do seu projeto, como o Fluxo do Usuário.</p>
+                            <h3>{t("processesCardTitle1")}</h3>
+                            <p>{t("processesCardText1")}</p>
                         </TextContainer>
                     </TimelineWrapper>
                 </SwiperSlide>
@@ -151,8 +153,8 @@ export default function DevelopmentProcess() {
                             <div className="icon"><DriveFileRenameOutlineIcon fontSize='larger' /></div>
                         </Card>
                         <TextContainer>
-                            <h3>Design</h3>
-                            <p>Após a realização do Kickoff e UX Research, os profissionais de design constroem um Wireframe que norteará as demais etapas: UX Writing, Ui Design e Desenvolvimento para garantir a melhor usabilidade e interação possíveis.</p>
+                            <h3>{t("processesCardTitle2")}</h3>
+                            <p>{t("processesCardText2")}</p>
                         </TextContainer>
                     </TimelineWrapper>
                 </SwiperSlide>
@@ -164,8 +166,8 @@ export default function DevelopmentProcess() {
                             <div className="icon"><CodeIcon fontSize='larger' /></div>
                         </Card>
                         <TextContainer>
-                            <h3>Desenvolvimento</h3>
-                            <p>Somos uma das maiores Software House do Brasil, pois contamos com um time de desenvolvedores experts em transformar o protótipo aprovado em um produto final feito com a melhor tecnologia. Começa na etapa de Backup, passando pelo Desenvolvimento Front e Back End, finalizando nas Integrações e Quality Assurance.</p>
+                            <h3>{t("processesCardTitle3")}</h3>
+                            <p>{t("processesCardText3")}</p>
                         </TextContainer>
                     </TimelineWrapper>
                 </SwiperSlide>
@@ -177,8 +179,8 @@ export default function DevelopmentProcess() {
                             <div className="icon"><DnsIcon fontSize='larger' /></div>
                         </Card>
                         <TextContainer>
-                            <h3>Publicação</h3>
-                            <p>A etapa de publicação só é finalizada após a realização de diversos testes e validações de todas as funcionalidades. Seja um aplicativo, site, software ou plataforma de streaming, tudo é testado com usuários reais.</p>
+                            <h3>{t("processesCardTitle4")}</h3>
+                            <p>{t("processesCardText4")}</p>
                         </TextContainer>
                     </TimelineWrapper>
                 </SwiperSlide>
@@ -190,8 +192,8 @@ export default function DevelopmentProcess() {
                             <div className="icon"><BuildIcon fontSize='larger' /></div>
                         </Card>
                         <TextContainer>
-                            <h3>Manutenção e Evolução</h3>
-                            <p>Todos os produtos digitais, inclusive no desenvolvimento de software, precisam de suporte e manutenção após o lançamento. Esse procedimento periódico ajuda a tornar a solução cada vez mais atualizada e livre de erros e bugs.</p>
+                            <h3>{t("processesCardTitle5")}</h3>
+                            <p>{t("processesCardText5")}</p>
                         </TextContainer>
                     </TimelineWrapper>
                 </SwiperSlide>

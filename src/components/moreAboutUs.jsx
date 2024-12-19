@@ -3,6 +3,7 @@ import Container from '@mui/material/Container';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import CodeIcon from '@mui/icons-material/Code';
+import { useTranslation } from 'react-i18next';
 
 export const SoftwareHouseContainer = styled('div')`
     display: flex;
@@ -120,6 +121,8 @@ const About = styled('div')`
 `;
 
 export default function MoreAboutUs() {
+    const { t } = useTranslation();
+
     return (
         <Container id="about_us" sx={{ py: { xs: 8, sm: 16 }, display: 'flex', flexDirection: 'column', gap: '2rem' }}>
             <SoftwareHouseContainer>
@@ -129,19 +132,17 @@ export default function MoreAboutUs() {
                         <Brightness1Icon />
                         <Brightness1Icon />
                     </IconsContainer>
-                    <h2>ENTENDA QUEM SOMOS NOS</h2>
+                    <h2>{t("aboutUsTitle")}</h2>
                 </TitleContainer>
 
-                <p>Uma Software House é uma empresa de tecnologia especializada na criação de aplicativos, sites, softwares e produtos digitais centrados no usuário. A Attri é uma Software House com equipe multidisciplinar e metodologias ágeis.
-                </p>
+                <p>{t("aboutUsSubTitle")}</p>
             </SoftwareHouseContainer>
 
             <BoxesContainer>
                 <div></div>
                 <div>
                     <CodeIcon fontSize='large' />
-                    Além de desenvolver trabalhar com as mais diversas tecnologias, nós garantimoss a melhor infraestrutura, manutenção e evolução do seu projeto.
-                </div>
+                    {t("aboutUsmainText")}                </div>
                 <div></div>
             </BoxesContainer>
 
@@ -149,35 +150,34 @@ export default function MoreAboutUs() {
                 <About>
                     <div>
                         <span>+</span>
-                        <h4>2 ANOS</h4>
+                        <h4>{t("aboutUscardTitle1")}</h4>
                     </div>
-                    <p>de experiência no ramo</p>
+                    <p>{t("aboutUscardText1")}</p>
                 </About>
 
                 <About>
                     <div>
                         <span>+</span>
-                        <h4>50</h4>
+                        <h4>{t("aboutUscardTitle2")}</h4>
                     </div>
-                    <p>Clientes satisfeitos</p>
+                    <p>{t("aboutUscardText2")}</p>
                 </About>
 
                 <About>
                     <div>
                         <span>+</span>
-                        <h4>50 PROJETOS</h4>
+                        <h4>{t("aboutUscardTitle3")}</h4>
                     </div>
-                    <p>de design e tecnologia realizados</p>
+                    <p>{t("aboutUscardText3")}</p>
                 </About>
 
                 <About>
                     <div>
                         <span>+</span>
-                        <h4>4 MIL</h4>
+                        <h4>{t("aboutUscardTitle4")}</h4>
                     </div>
-                    <p>horas de desenvolvimento web</p>
+                    <p>{t("aboutUscardText4")}</p>
                 </About>
-
             </Abouts>
         </Container>
     )

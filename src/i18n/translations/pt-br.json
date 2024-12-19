@@ -1,0 +1,101 @@
+{
+    "translation":{
+    "portugues": "Português",
+    "english": "Inglês",
+    "spanish": "Espanhol",
+    "headerAbouUs": "Sobre nós",
+    "headerProccess": "Processos",
+    "headerPeople": "Siga nos",
+    "headerContato": "Contato",
+    "homeTitle1":"Criamos",
+    "homeTitle2":"Soluções",
+    "homeSubTitle":"Transformamos suas ideias em realidade digital, oferecendo soluções personalizadas e inovadoras para impulsionar seu negócio",
+    "homeplaceholderInput":"company@gmail.com",
+    "homeButtonSubmit":"Enviar",
+    "homeTextBellowInput":"Envie seu E-mail agora",
+
+    
+    "aboutUsTitle":"ENTENDA QUEM SOMOS NOS",
+    "aboutUsSubTitle":"Somos uma uma empresa de tecnologia especializada na criação de sites, aplicativos softwares e produtos digitais centrados no usuário. A Varallo solutions é uma Software House com equipe multidisciplinar e metodologias ágeis.",
+    "aboutUsmainText":"Além de desenvolver trabalhar com as mais diversas tecnologias, nós garantimoss a melhor infraestrutura, manutenção e evolução do seu projeto.",
+    "aboutUscardTitle1":"2 ANOS",
+    "aboutUscardText1":"de experiência no ramo",
+    "aboutUscardTitle2":"23",
+    "aboutUscardText2":"Clientes satisfeitos",
+    "aboutUscardTitle3":"18 PROJETOS",
+    "aboutUscardText3":"de design e tecnologia realizados",
+    "aboutUscardTitle4":"4 MIL",
+    "aboutUscardText4":"horas de desenvolvimento web",
+
+    "processesTitle":"NOSSO PROCESSO DE DESENVOLVIMENTO",
+
+    "processesCardTitle1":"Planejamento",
+    "processesCardText1":"O desenvolvimento de software sob medida começa no planejamento, onde a equipe de especialistas da Software House recolhe informações para estruturar todo o projeto com base nas necessidades do usuário.  A partir das informações levantadas nas etapas de Kickoff UX, Kickoff Dev e UX Research, é construído o esqueleto do seu projeto, como o Fluxo do Usuário.",
+    "processesCardTitle2":"Design",
+    "processesCardText2":"Após a realização do Kickoff e UX Research, os profissionais de design constroem um Wireframe que norteará as demais etapas: UX Writing, Ui Design e Desenvolvimento para garantir a melhor usabilidade e interação possíveis.",
+    "processesCardTitle3":"Desenvolvimento",
+    "processesCardText3":"Somos uma Software House focada em entregar soluções de alta qualidade para nossos clientes. Com uma equipe ágil e dedicada, transformamos protótipos aprovados em produtos finais eficientes, utilizando as melhores tecnologias disponíveis.",
+    "processesCardTitle4":"Publicação",
+    "processesCardText4":"A etapa de publicação só é finalizada após a realização de diversos testes e validações de todas as funcionalidades. Seja um aplicativo, site, software ou plataforma de streaming, tudo é testado com usuários reais.",
+    "processesCardTitle5":"Manutenção",
+    "processesCardText5":"Além de desenvolver trabalhar com as mais diversas tecnologias, nós garantimoss a melhor infraestrutura, manutenção e evolução do seu projeto.",
+
+
+    "casesTitle":"ALGUNS DOS NOSSOS CASES",
+    "interactName":"Interacti Play",
+    "interactTitle":"plataforma de criação de VSL interativa.",
+    "interactText":"A Interacti é uma plataforma inovadora que transforma a criação de Vídeo Sales Letters (VSL) interativas em uma experiência intuitiva e eficaz. Com ferramentas simples e poderosas, você pode engajar seu público de maneira personalizada, aumentando conversões e promovendo uma comunicação mais envolvente.",
+
+    "ciclistName":"Bicicreteiro",
+    "ciclistTitle":"Painel de Administração de Aplicativo Mobile.",
+    "ciclistText":"O Bicicreteiro é um painel administrativo completo para a gestão de um aplicativo mobile, oferecendo todas as funcionalidades disponíveis na aplicação de forma centralizada e intuitiva. Ideal para monitorar, controlar e gerenciar usuários, trajetos e muito mais, o painel foi projetado para facilitar a administração e otimizar processos.",
+
+    "agendPetName":"Agent Pet",
+    "agendPetTitle":"Plataforma de Gestão de Horários para Petshops.",
+    "agendPetText":"O Agent Pet é uma solução SaaS desenvolvida especialmente para petshops, permitindo uma gestão eficiente e prática dos horários de atendimento. A plataforma possibilita adicionar serviços, gerenciar prestadores, acompanhar pagamentos pendentes e visualizar serviços futuros de forma clara e organizada. Tudo para garantir mais agilidade e profissionalismo no seu negócio.",
+
+    "blackBiographyName":"Biografia Preta",
+    "blackBiographyTitle":"Reescrevendo histórias com tecnologia e inovação",
+    "blackBiographyText":"A Biografia Preta é uma plataforma revolucionária que combina Inteligência Artificial e Blockchain para celebrar e preservar histórias de figuras afrodescendentes. Com ela, é possível criar biografias únicas, interagir com Mawini, um assistente de IA dedicado, e comercializar NFTs exclusivos, promovendo cultura, memória e inovação.",
+
+    "eurosulName":"Eurosul Equipamentos Nauticos",
+    "eurosulTitle":"Automação inteligente para gestão de dados",
+    "eurosulText":"A Eurosul Equipamentos Náuticos implementou uma solução de automação de banco de dados totalmente integrada ao Hardness CRM. Essa sincronização garante maior eficiência na gestão de informações, otimiza processos e melhora o acompanhamento de leads e oportunidades de negócio.",
+    
+    "vapnetName":"VAPNET SOFTWARES LTDA",
+    "vapnetTitle":"Soluções personalizadas em chatbots",
+    "vapnetText":"Desenvolvimento de uma API de chatbot utilizando a tecnologia da OpenAI, com a criação de múltiplos agentes personalizados. Cada cliente pode configurar respostas exclusivas, garantindo uma comunicação eficiente e alinhada às suas necessidades específicas.",
+
+
+    "peopleTitle":"CONHEÇA NÓS",
+    "thiagoRole":"Fundador",
+    "yagoRole":"Co-Fundador",
+
+    "contactTitle":"VAMOS DESENVOLVER O SEU PROJETO?",
+    "contactText":"Conte um pouco mais sobre o seu projeto para que possamos encontrar a melhor solução e agendarmos uma conversa mais aprofundada.",
+    "ContactHotline":"Linha direta 24/7",
+    "contactPhone":"+55 (12) 98136-5950",
+    "contactEmail":"varallosolutions@gmail.com",
+    "contactWorkHour":"Seg. - Sab: 9:00 - 18:00",
+    "contactTextWorkHour":"Horario de trabalho: ",
+    "contactInputNameLabel":"Nome",
+    "contactInputNamePlaceholder":"Seu nome Completo",
+
+    "contactInputCompanyNameLabel":"Nome da empresa",
+    "contactInputCompanyNamePlaceholder":"Nome da empresa",
+
+    "contactInputEmailLabel":"Email de contato",
+    "contactInputEmailPlaceholder":"nome@gmail.com",
+
+    "contactInputPhoneLabel":"Telefone",
+
+    "contactInputDescriptionLabel":"Descrição do projeto",
+    "contactInputDescriptionPlaceHolder":"Descreva seu projeto",
+
+    "contactButtonSubmit":"Enviar agora",
+
+    "footerAboutUs":"Nossa companhia foi fundada em 2022, especializada no desenvolvimento de Softwares, Aplicativos, soluções SaaS e plataformas digitais. Ela ajuda empresas a escalarem seus negócios por meio de tecnologia personalizada e eficiente.",
+    "footerRightsCompany":"© 2022 Varallo solutions LTDA. Todos os direitos reservados / CNPJ: 54.125.550/0001-66"
+
+
+}}

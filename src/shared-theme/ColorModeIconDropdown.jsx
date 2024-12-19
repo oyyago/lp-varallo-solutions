@@ -35,7 +35,7 @@ export default function ColorModeIconDropdown(props) {
           borderColor: (theme.vars || theme).palette.divider,
         })}
       />
-    );
+    );          
   }
   const resolvedMode = systemMode || mode;
   const icon = {

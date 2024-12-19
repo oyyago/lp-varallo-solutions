@@ -1,0 +1,98 @@
+{
+    "translation": {
+      "portugues": "Portuguese",
+      "english": "English",
+      "spanish": "Spanish",
+      "headerAbouUs":"About us",
+      "headerProccess":"Processes",
+      "headerPeople":"Follow us",
+      "headerContato":"Contact",
+      "homeTitle1": "Creating",
+      "homeTitle2": "Solutions",
+      "homeSubTitle": "We turn your ideas into digital reality, offering personalized and innovative solutions to boost your business.",
+      "homeplaceholderInput": "company@gmail.com",
+      "homeButtonSubmit": "Send",
+      "homeTextBellowInput": "Send your email now",
+  
+      "aboutUsTitle": "UNDERSTAND WHO WE ARE",
+      "aboutUsSubTitle": "We are a technology company specializing in creating websites, applications, software, and user-centered digital products. Varallo Solutions is a Software House with a multidisciplinary team and agile methodologies.",
+      "aboutUsmainText": "In addition to working with various technologies, we ensure the best infrastructure, maintenance, and evolution of your project.",
+      "aboutUscardTitle1": "2 YEARS",
+      "aboutUscardText1": "of experience in the field",
+      "aboutUscardTitle2": "23",
+      "aboutUscardText2": "Satisfied clients",
+      "aboutUscardTitle3": "18 PROJECTS",
+      "aboutUscardText3": "in design and technology completed",
+      "aboutUscardTitle4": "4 THOUSAND",
+      "aboutUscardText4": "hours of web development",
+  
+      "processesTitle": "OUR DEVELOPMENT PROCESS",
+  
+      "processesCardTitle1": "Planning",
+      "processesCardText1": "Custom software development starts with planning, where the Software House team gathers information to structure the entire project based on user needs. Using data collected during the Kickoff UX, Kickoff Dev, and UX Research stages, the skeleton of your project, such as the User Flow, is created.",
+      "processesCardTitle2": "Design",
+      "processesCardText2": "After the Kickoff and UX Research, the design professionals create a Wireframe that guides subsequent stages: UX Writing, UI Design, and Development, ensuring the best possible usability and interaction.",
+      "processesCardTitle3": "Development",
+      "processesCardText3": "We are a Software House focused on delivering high-quality solutions to our clients. With an agile and dedicated team, we turn approved prototypes into efficient final products using the best available technologies.",
+      "processesCardTitle4": "Publishing",
+      "processesCardText4": "The publishing stage is only completed after numerous tests and validations of all functionalities. Whether it’s an app, website, software, or streaming platform, everything is tested with real users.",
+      "processesCardTitle5": "Maintenance",
+      "processesCardText5": "In addition to working with various technologies, we ensure the best infrastructure, maintenance, and evolution of your project.",
+  
+      "casesTitle": "SOME OF OUR CASES",
+      "interactName": "Interacti Play",
+      "interactTitle": "Interactive VSL creation platform.",
+      "interactText": "Interacti is an innovative platform that transforms creating interactive Video Sales Letters (VSL) into an intuitive and effective experience. With simple yet powerful tools, you can engage your audience personally, increasing conversions and promoting more engaging communication.",
+  
+      "ciclistName": "Bicicreteiro",
+      "ciclistTitle": "Mobile Application Administration Panel.",
+      "ciclistText": "Bicicreteiro is a comprehensive administrative panel for managing a mobile application, offering all the application features in a centralized and intuitive manner. Ideal for monitoring, controlling, and managing users, routes, and much more, the panel was designed to simplify administration and optimize processes.",
+  
+      "agendPetName": "Agent Pet",
+      "agendPetTitle": "Scheduling Management Platform for Pet Shops.",
+      "agendPetText": "Agent Pet is a SaaS solution specially developed for pet shops, enabling efficient and practical management of appointment schedules. The platform allows adding services, managing providers, tracking pending payments, and viewing upcoming services clearly and organizedly. Everything to ensure more agility and professionalism for your business.",
+  
+      "blackBiographyName": "Biografia Preta",
+      "blackBiographyTitle": "Rewriting stories with technology and innovation",
+      "blackBiographyText": "Biografia Preta is a revolutionary platform that combines Artificial Intelligence and Blockchain to celebrate and preserve the stories of Afro-descendant figures. With it, you can create unique biographies, interact with Mawini, a dedicated AI assistant, and trade exclusive NFTs, promoting culture, memory, and innovation.",
+  
+      "eurosulName": "Eurosul Nautical Equipment",
+      "eurosulTitle": "Intelligent automation for data management",
+      "eurosulText": "Eurosul Nautical Equipment implemented a fully integrated database automation solution with Hardness CRM. This synchronization ensures greater efficiency in information management, optimizes processes, and improves lead and business opportunity tracking.",
+  
+      "vapnetName": "VAPNET SOFTWARES LTDA",
+      "vapnetTitle": "Custom chatbot solutions",
+      "vapnetText": "Development of a chatbot API using OpenAI technology, with the creation of multiple personalized agents. Each client can configure exclusive responses, ensuring efficient communication tailored to their specific needs.",
+  
+      "peopleTitle": "MEET OUR TEAM",
+      "thiagoRole": "Founder",
+      "yagoRole": "Co-Founder",
+  
+      "contactTitle": "LET'S DEVELOP YOUR PROJECT?",
+      "contactText": "Tell us a little more about your project so we can find the best solution and schedule a deeper conversation.",
+      "ContactHotline": "24/7 Hotline",
+      "contactPhone": "+55 (12) 98136-5950",
+      "contactEmail": "varallosolutions@gmail.com",
+      "contactWorkHour": "Mon. - Sat: 9:00 AM - 6:00 PM",
+      "contactTextWorkHour": "Work hours: ",
+      "contactInputNameLabel": "Name",
+      "contactInputNamePlaceholder": "Your Full Name",
+  
+      "contactInputCompanyNameLabel": "Company Name",
+      "contactInputCompanyNamePlaceholder": "Company Name",
+  
+      "contactInputEmailLabel": "Contact Email",
+      "contactInputEmailPlaceholder": "name@gmail.com",
+  
+      "contactInputPhoneLabel": "Phone",
+  
+      "contactInputDescriptionLabel": "Project Description",
+      "contactInputDescriptionPlaceHolder": "Describe your project",
+  
+      "contactButtonSubmit": "Send Now",
+  
+      "footerAboutUs": "Our company was founded in 2022, specializing in developing Software, Applications, SaaS solutions, and digital platforms. It helps businesses scale their operations through customized and efficient technology.",
+      "footerRightsCompany": "© 2022 Varallo Solutions LTDA. All rights reserved / CNPJ: 54.125.550/0001-66"
+    }
+  }
+  
