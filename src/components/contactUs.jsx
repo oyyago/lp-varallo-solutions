@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { IconsContainer, SoftwareHouseContainer, TitleContainer } from './moreAboutUs';
-import { Alert, alpha, Container, InputLabel, Snackbar, Stack, styled, TextareaAutosize, TextField } from '@mui/material';
+import { Alert, alpha, CircularProgress, Container, InputLabel, Snackbar, Stack, styled, TextareaAutosize, TextField } from '@mui/material';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
 import { visuallyHidden } from '@mui/utils';
 import { useTranslation } from 'react-i18next';
@@ -134,7 +134,7 @@ const ButtonContainer = styled('div')`
 
 
 export const ContactUs = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [form, setForm] = useState({
     name: '',
     company: '',
@@ -144,6 +144,9 @@ export const ContactUs = () => {
   });
   const [errors, setErrors] = useState({});
   const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [resultMessage, setResultMessage] = React.useState('');
+  const [error, setError] = React.useState(false);
+  const [loading, setLoading] = React.useState(false); // Estado para controlar o carregamento
 
   const validateForm = () => {
     const newErrors = {};
@@ -156,21 +159,55 @@ export const ContactUs = () => {
     return newErrors;
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const newErrors = validateForm();
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
+    // if (Object.keys(newErrors).length > 0) {
+    //   setErrors(newErrors);
+    //   return;
+    // }
+    setLoading(true); // Ativar o carregamento (spinner)
+    try {
+      const response = await fetch("https://www.api.varallosolutions.com/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name:form.name,
+          companyName:form.company,
+          email:form.email,
+          description:form.description,
+          phone:form.phone,
+          lang: i18n.language, // Obtém o idioma atual do i18n
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        // Mostra a mensagem de sucesso da resposta
+        console.log(result.message);
+        setError(false)
+        setResultMessage(result.message);
+        setSnackbarOpen(true); // Abrir o Snackbar
+      } else {
+        setError(true)
+        setResultMessage(result.message)
+        setSnackbarOpen(true); // Abrir o Snackbar
+        console.error("Erro no servidor:", result || "Erro desconhecido.");
+      }
+    } catch (error) {
+      console.error("Erro na requisição:", error);
+    } finally {
+      setErrors({});
+      setLoading(false); // Desativar o carregamento
     }
-    setErrors({});
-    setSnackbarOpen(true);
   };
 
   const handleChange = (field, value) => {
     setForm({ ...form, [field]: value });
     setErrors({ ...errors, [field]: '' });
   };
-
 
   return (
     <Container id="contact" sx={{ py: { xs: 8, sm: 16 }, }}>
@@ -265,18 +302,21 @@ export const ContactUs = () => {
           </InputContainer>
 
           <ButtonContainer>
-            <button onClick={handleSubmit}>{t('contactButtonSubmit')}</button>
+            <button onClick={handleSubmit}> {loading ? <CircularProgress size={20} sx={{ color: 'white' }} /> :t('contactButtonSubmit')}</button>
           </ButtonContainer>
         </ContactContainer>
         <Snackbar
-        open={snackbarOpen}
-        autoHideDuration={3000}
-        onClose={() => setSnackbarOpen(false)}
-      >
-        <Alert severity="success" onClose={() => setSnackbarOpen(false)}>
-          {t('contactSuccessMessage')}
-        </Alert>
-      </Snackbar>
+          anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+          open={snackbarOpen}
+          autoHideDuration={3000}
+          onClose={() => setSnackbarOpen(false)}
+        >
+          <Alert
+            severity={error ? 'error' : 'success'}
+            onClose={() => setSnackbarOpen(false)}>
+            {resultMessage}
+          </Alert>
+        </Snackbar>
       </MainContainer>
     </Container>
   );

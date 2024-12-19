@@ -54,7 +54,8 @@ export default function Hero() {
   const [loading, setLoading] = React.useState(false); // Estado para controlar o carregamento
   const [emailValid, setEmailValid] = React.useState(true); // Estado para validar o email
   const [snackbarOpen, setSnackbarOpen] = React.useState(false); // Estado para controlar o Snackbar
-
+  const [resultMessage, setResultMessage] = React.useState('');
+  const [error, setError] = React.useState(false);
   // Função para validar o e-mail
   const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -72,7 +73,7 @@ export default function Hero() {
     setLoading(true); // Ativar o carregamento (spinner)
 
     try {
-      const response = await fetch("https://api.varallosolutions.com/email", {
+      const response = await fetch("https://www.api.varallosolutions.com/email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -86,12 +87,15 @@ export default function Hero() {
       const result = await response.json();
 
       if (response.ok) {
-        // Mostra a mensagem de sucesso da resposta
         console.log(result.message);
+        setError(false)
+        setResultMessage(result.message);
         setSnackbarOpen(true); // Abrir o Snackbar
       } else {
-        // Lida com erros do servidor
-        console.error("Erro no servidor:", result.message || "Erro desconhecido.");
+        setError(true)
+        setResultMessage(result.message)
+        setSnackbarOpen(true); // Abrir o Snackbar
+        console.error("Erro no servidor:", result || "Erro desconhecido.");
       }
     } catch (error) {
       console.error("Erro na requisição:", error);
@@ -226,10 +230,10 @@ export default function Hero() {
         >
           <Alert
             onClose={() => setSnackbarOpen(false)}
-            severity="success"
+            severity={error?'error':'success'}
             sx={{ width: '100%' }}
           >
-            {t("emailSuccessMessage")}
+            {resultMessage}
           </Alert>
         </Snackbar>
       </Box>

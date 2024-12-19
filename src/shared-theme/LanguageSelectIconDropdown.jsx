@@ -12,9 +12,9 @@ import { useTranslation } from 'react-i18next';
 
 export default function LanguageSelectIconDropdown(props) {
     const [anchorEl, setAnchorEl] = React.useState(null);
-    const [language, setLanguage] = React.useState('en');
-    const open = Boolean(anchorEl);
     const { i18n, t } = useTranslation();
+    const [language, setLanguage] = React.useState(i18n.language);
+    const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
