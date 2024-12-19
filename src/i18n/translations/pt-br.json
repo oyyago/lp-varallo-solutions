@@ -3,7 +3,7 @@
     "portugues": "Português",
     "english": "Inglês",
     "spanish": "Espanhol",
-    "headerAbouUs": "Sobre nós",
+    "headerAbouUs": "Sobre nos",
     "headerProccess": "Processos",
     "headerPeople": "Siga nos",
     "headerContato": "Contato",
@@ -17,7 +17,7 @@
     
     "aboutUsTitle":"ENTENDA QUEM SOMOS NOS",
     "aboutUsSubTitle":"Somos uma uma empresa de tecnologia especializada na criação de sites, aplicativos softwares e produtos digitais centrados no usuário. A Varallo solutions é uma Software House com equipe multidisciplinar e metodologias ágeis.",
-    "aboutUsmainText":"Além de desenvolver trabalhar com as mais diversas tecnologias, nós garantimoss a melhor infraestrutura, manutenção e evolução do seu projeto.",
+    "aboutUsmainText":"Além de desenvolver trabalhar com as mais diversas tecnologias, nos garantimoss a melhor infraestrutura, manutenção e evolução do seu projeto.",
     "aboutUscardTitle1":"2 ANOS",
     "aboutUscardText1":"de experiência no ramo",
     "aboutUscardTitle2":"23",
@@ -38,7 +38,7 @@
     "processesCardTitle4":"Publicação",
     "processesCardText4":"A etapa de publicação só é finalizada após a realização de diversos testes e validações de todas as funcionalidades. Seja um aplicativo, site, software ou plataforma de streaming, tudo é testado com usuários reais.",
     "processesCardTitle5":"Manutenção",
-    "processesCardText5":"Além de desenvolver trabalhar com as mais diversas tecnologias, nós garantimoss a melhor infraestrutura, manutenção e evolução do seu projeto.",
+    "processesCardText5":"Todos os produtos digitais, inclusive no desenvolvimento de software, precisam de suporte e manutenção após o lançamento. Esse procedimento periódico ajuda a tornar a solução cada vez mais atualizada e livre de erros e bugs.",
 
 
     "casesTitle":"ALGUNS DOS NOSSOS CASES",
@@ -67,7 +67,7 @@
     "vapnetText":"Desenvolvimento de uma API de chatbot utilizando a tecnologia da OpenAI, com a criação de múltiplos agentes personalizados. Cada cliente pode configurar respostas exclusivas, garantindo uma comunicação eficiente e alinhada às suas necessidades específicas.",
 
 
-    "peopleTitle":"CONHEÇA NÓS",
+    "peopleTitle":"CONHEÇA NOS",
     "thiagoRole":"Fundador",
     "yagoRole":"Co-Fundador",
 
