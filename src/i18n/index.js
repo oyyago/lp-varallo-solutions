@@ -14,4 +14,5 @@ i18n.use(initReactI18next).init({
         ptBr:ptBrJson,
         es:esjson
     }
+    
 });
