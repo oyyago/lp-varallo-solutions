@@ -5,7 +5,7 @@ import enJson from './translations/en.json';
 import esjson from './translations/es.json';
 
 i18n.use(initReactI18next).init({
-    fallbackLng:'en',
+    fallbackLng:'ptBr',
     interpolation:{
         escapeValue:false
     },
