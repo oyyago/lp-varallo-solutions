@@ -115,13 +115,6 @@ export default function ProjectCases() {
             image: interactImage,
         },
         {
-            title: t("ciclistName"),
-            subtitle: t('ciclistTitle'),
-            description: t('ciclistText'),
-            tags: ['C#', '.NET', 'Front-end', 'Blazor'],
-            image: ciclistImage,
-        },
-        {
             title: t("agendPetName"),
             subtitle: t('agendPetTitle'),
             description: t('agendPetText'),
