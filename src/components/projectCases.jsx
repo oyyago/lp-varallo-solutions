@@ -12,7 +12,6 @@ import CodeIcon from '@mui/icons-material/Code';
 import DnsIcon from '@mui/icons-material/Dns';
 import BuildIcon from '@mui/icons-material/Build';
 import { Autoplay } from 'swiper/modules';
-import ciclistImage from '../assets/cliclistImage.svg';
 import interactImage from '../assets/interactImage.svg';
 import agendPet from '../assets/agendPet.svg';
 import biografiaImage from '../assets/biografiaImage.svg';
